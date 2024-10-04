@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Casa Informática</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/@heroicons/react@1.0.6/outline/heroicons.js"></script>
+    <style>
+        .navbar {
+            background-color: #374369; /* Color del navbar */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-white">
+    <nav class="navbar relative mx-auto p-6">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="mr-10">
+                    <a href="/">
+                        <img src="img/logoCasa.png" alt="Logo" width="80" height="80" class="h-20 w-20">
+                    </a>
+                </div>
+                <div class="hidden space-x-12 md:flex">
+                    <a href="/" class="text-white hover:text-yellow-400 transition">Inicio</a>
+                    <a href="/about" class="text-white hover:text-yellow-400 transition">Sobre Nosotros</a>
+                    <a href="/catalogo" class="text-white hover:text-yellow-400 transition">Contáctanos</a>
+                </div>
+            </div>
+            
+            <button class="md:hidden flex items-center" id="navbarToggle">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobileMenu" class="md:hidden hidden">
+        <div class="flex flex-col py-5 bg-white w-full">
+            <a href="/" class="p-3 text-gray-700 hover:bg-blue-300 transition">Inicio</a>
+            <a href="/about" class="p-3 text-gray-700 hover:bg-blue-300 transition">Sobre Nosotros</a>
+            <a href="/catalogo" class="p-3 text-gray-700 hover:bg-blue-300 transition">Contáctanos</a>
+        </div>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('navbarToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        toggleButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
