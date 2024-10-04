@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de React</title>
+    <style>
+        body {
+            background-color: #A3D5E5; /* Color celeste */
+            color: #ffffff; /* Color de texto blanco */
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            max-width: 1200px; /* Max width for the container */
+            margin: 0 auto; /* Center container */
+            padding: 20px; /* Padding around the content */
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1B2C64; /* Color del título */
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #1B2C64; /* Fondo de tarjeta */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+            padding: 20px; /* Espaciado interno */
+            margin-bottom: 20px; /* Espaciado entre tarjetas */
+            transition: transform 0.2s; /* Efecto de hover */
+        }
+        .card:hover {
+            transform: translateY(-5px); /* Efecto de elevación */
+        }
+        h3 {
+            font-size: 1.8rem; /* Tamaño de los subtítulos */
+            margin-bottom: 10px; /* Espaciado inferior */
+        }
+        p {
+            font-size: 1.1rem; /* Tamaño de texto para párrafos */
+            line-height: 1.6; /* Espaciado entre líneas */
+        }
+        ul {
+            padding-left: 20px; /* Espaciado izquierdo para listas */
+        }
+        .footer {
+            text-align: center; /* Centrar el pie de página */
+            padding: 10px 0; /* Espaciado vertical */
+            background-color: #1B2C64; /* Color de fondo del pie de página */
+            color: white; /* Color de texto en el pie de página */
+            margin-top: 20px; /* Espaciado superior */
+        }
+        .button {
+            display: inline-block; /* Mostrar como un bloque en línea */
+            background-color: #1B2C64; /* Color del botón */
+            color: white; /* Color de texto del botón */
+            padding: 10px 20px; /* Espaciado interno del botón */
+            border-radius: 5px; /* Bordes redondeados */
+            text-decoration: none; /* Quitar subrayado */
+            font-size: 1.2rem; /* Tamaño de fuente */
+            margin-top: 20px; /* Espaciado superior */
+            transition: background-color 0.3s; /* Efecto de transición */
+        }
+        .button:hover {
+            background-color: #0d1b34; /* Color al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/navigation') %>
+    
+    <div class="container py-16">
+        <h2 class="text-3xl font-bold mb-8">DESCRIPCIÓN DEL CURSO DE REACT</h2>
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">ENCARGADO DEL CURSO:</h3>
+            <div class="flex items-center mb-4">
+                <img src="/img/Lucas.jpeg" alt="Leonardo Palomino" class="w-24 h-24 rounded-full mr-4"> <!-- Aumentar tamaño -->
+                <p class="text-lg text-white">
+                    <strong>LUCAS ESPINOZA LAURENTE</strong><br>
+                    Programador Full Stack 
+                </p>
+            </div>
+        </div>
+        
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">BALOTARIO DEL CURSO DE REACT</h3>
+            <p class="text-lg text-white">
+                <strong>Clase 1:</strong> Conceptos Básicos, JSX y Creación de Componentes Funcionales
+                <ul class="list-disc ml-5">
+                    <li>Introducción a React y su ecosistema.</li>
+                    <li>JSX: definición y uso.</li>
+                    <li>Creación de componentes funcionales en JavaScript.</li>
+                </ul>
+        
+                <strong>Clase 2:</strong> Componentes y Props
+                <ul class="list-disc ml-5">
+                    <li>Estructura y creación de componentes.</li>
+                    <li>Uso y manejo de props.</li>
+                </ul>
+        
+                <strong>Clase 3:</strong> Estado y Ciclo de Vida
+                <ul class="list-disc ml-5">
+                    <li>Manejo del estado con useState y this.state.</li>
+                    <li>Ciclo de vida de componentes de clase.</li>
+                    <li>Uso de useEffect para efectos secundarios.</li>
+                </ul>
+        
+                <strong>Clase 4:</strong> Manejo de Eventos, Formularios y Enrutamiento
+                <ul class="list-disc ml-5">
+                    <li>Gestión de eventos (click, change, submit).</li>
+                    <li>Control y validación de formularios.</li>
+                    <li>Enrutamiento básico con React Router.</li>
+                </ul>
+        
+                <strong>Clase 5:</strong> Introducción a TypeScript y Tailwind CSS
+                <ul class="list-disc ml-5">
+                    <li>Conceptos básicos de TypeScript.</li>
+                    <li>Configuración de un proyecto React con TypeScript.</li>
+                    <li>Uso de tipos e interfaces en componentes.</li>
+                    <li>Introducción a Tailwind CSS y aplicación de estilos.</li>
+                </ul>
+        
+                <strong>Clase 6:</strong> Manejo de APIs con TypeScript
+                <ul class="list-disc ml-5">
+                    <li>Consumo de APIs usando fetch y axios.</li>
+                    <li>Definición de tipos para respuestas de APIs.</li>
+                    <li>Manejo de errores y sincronización de datos.</li>
+                </ul>
+        
+                <strong>Clase 7:</strong> Despliegue y Desarrollo del Proyecto
+                <ul class="list-disc ml-5">
+                    <li>Preparación del proyecto para el despliegue.</li>
+                    <li>Configuración de entornos de producción y herramientas de despliegue.</li>
+                    <li>Desarrollo de un proyecto práctico.</li>
+                </ul>
+        
+                <strong>Clase 8:</strong> Proyectos Finales
+                <ul class="list-disc ml-5">
+                    <li>Desarrollo y presentación de proyectos finales.</li>
+                    <li>Revisión, ajustes y feedback sobre los proyectos.</li>
+                </ul>
+            </p>
+        </div>
+        
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">¿Cuenta con certificado?</h3>
+            <p class="text-lg text-white">
+                Se otorgará un certificado luego de haber completado el curso de manera exitosa.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">HORARIO DEL CURSO</h3>
+            <p class="text-lg text-white">
+                DOMINGOS<br>
+                <strong>HORARIOS:</strong> 4:00 pm - 7:00 pm<br>
+                <strong>HORAS:</strong> 24 HORAS<br>
+                <strong>INICIA:</strong> 8 de Setiembre<br>
+                <strong>TERMINA:</strong> 27 de Octubre
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">COSTO DEL CURSO</h3> <br>
+            <p class="text-lg text-white">
+                
+                <strong>COSTO: </strong> 120 SOLES<br>
+                
+            </p>
+        </div>
+
+        <!-- Botón de Inscribirse -->
+        <div class="text-center">
+            <a href="https://wa.me/51976783049" class="button">Inscribirse</a> <!-- Enlace a WhatsApp -->
+        </div>
+    </div>
+
+    
+    <%- include('partials/footer') %>
+    
+</body>
+</html>

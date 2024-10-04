@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Python</title>
+    <style>
+        body {
+            background-color: #A3D5E5; /* Color celeste */
+            color: #ffffff; /* Color de texto blanco */
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            max-width: 1200px; /* Max width for the container */
+            margin: 0 auto; /* Center container */
+            padding: 20px; /* Padding around the content */
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1B2C64; /* Color del título */
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #1B2C64; /* Fondo de tarjeta */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+            padding: 20px; /* Espaciado interno */
+            margin-bottom: 20px; /* Espaciado entre tarjetas */
+            transition: transform 0.2s; /* Efecto de hover */
+        }
+        .card:hover {
+            transform: translateY(-5px); /* Efecto de elevación */
+        }
+        h3 {
+            font-size: 1.8rem; /* Tamaño de los subtítulos */
+            margin-bottom: 10px; /* Espaciado inferior */
+        }
+        p {
+            font-size: 1.1rem; /* Tamaño de texto para párrafos */
+            line-height: 1.6; /* Espaciado entre líneas */
+        }
+        ul {
+            padding-left: 20px; /* Espaciado izquierdo para listas */
+        }
+        .footer {
+            text-align: center; /* Centrar el pie de página */
+            padding: 10px 0; /* Espaciado vertical */
+            background-color: #1B2C64; /* Color de fondo del pie de página */
+            color: white; /* Color de texto en el pie de página */
+            margin-top: 20px; /* Espaciado superior */
+        }
+        .button {
+            display: inline-block; /* Mostrar como un bloque en línea */
+            background-color: #1B2C64; /* Color del botón */
+            color: white; /* Color de texto del botón */
+            padding: 10px 20px; /* Espaciado interno del botón */
+            border-radius: 5px; /* Bordes redondeados */
+            text-decoration: none; /* Quitar subrayado */
+            font-size: 1.2rem; /* Tamaño de fuente */
+            margin-top: 20px; /* Espaciado superior */
+            transition: background-color 0.3s; /* Efecto de transición */
+        }
+        .button:hover {
+            background-color: #0d1b34; /* Color al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/navigation') %>
+    
+    <div class="container py-16">
+        <h2 class="text-3xl font-bold mb-8">DESCRIPCIÓN DEL CURSO DE JAVASCRIPT</h2>
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">ENCARGADO DEL CURSO:</h3>
+            <div class="flex items-center mb-4">
+                <img src="/img/leo.jpg" alt="Leonardo Palomino" class="w-24 h-24 rounded-full mr-4"> <!-- Aumentar tamaño -->
+                <p class="text-lg text-white">
+                    <strong>LEONARDO PALOMINO</strong><br>
+                    Programador Full Stack y Creador de La Casa Informática
+                </p>
+            </div>
+        </div>
+        
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">BALOTARIO DEL CURSO DE JAVASCRIPT</h3>
+            <p class="text-lg text-white">
+                <strong>Día 1:</strong> Introducción a JavaScript y su entorno de desarrollo, variables y tipos de datos.
+                <ul class="list-disc ml-5">
+                    <li>Introducción a JavaScript.</li>
+                    <li>Configuración del entorno de desarrollo.</li>
+                    <li>Variables y tipos de datos.</li>
+                </ul>
+        
+                <strong>Día 2:</strong> Operadores y expresiones y estructuras de control: if, else, switch.
+                <ul class="list-disc ml-5">
+                    <li>Operadores aritméticos, lógicos y relacionales.</li>
+                    <li>Control de flujo: if, else, switch.</li>
+                </ul>
+        
+                <strong>Día 3:</strong> Bucles: for, while, do-while, arreglos y colecciones básicas.
+                <ul class="list-disc ml-5">
+                    <li>Bucles en JavaScript: for, while, do-while.</li>
+                    <li>Introducción a arreglos: declaración, inicialización y uso.</li>
+                    <li>Colecciones básicas.</li>
+                </ul>
+        
+                <strong>Día 4:</strong> Métodos y funciones, introducción a la POO en JavaScript: Clases y Objetos.
+                <ul class="list-disc ml-5">
+                    <li>Definición y uso de métodos y funciones.</li>
+                    <li>Conceptos básicos de Programación Orientada a Objetos (POO): Clases y Objetos.</li>
+                </ul>
+        
+                <strong>Día 5:</strong> Herencia y polimorfismo, Encapsulamiento y constructores.
+                <ul class="list-disc ml-5">
+                    <li>Herencia y polimorfismo en JavaScript.</li>
+                    <li>Encapsulamiento y constructores.</li>
+                </ul>
+        
+                <strong>Día 6:</strong> Interfaces y abstracción, práctica y revisión de conceptos.
+                <ul class="list-disc ml-5">
+                    <li>Definición y uso de interfaces.</li>
+                    <li>Abstracción y revisión de conceptos.</li>
+                </ul>
+        
+                <strong>Día 7:</strong> Introducción a Node.js y npm, manipulación del DOM y eventos en JavaScript.
+                <ul class="list-disc ml-5">
+                    <li>Introducción a Node.js y npm.</li>
+                    <li>Manipulación del DOM.</li>
+                    <li>Eventos en JavaScript.</li>
+                </ul>
+        
+                <strong>Día 8:</strong> Introducción a Express.js y creación de una API básica, conexión a una base de datos con Node.js y Express.js.
+                <ul class="list-disc ml-5">
+                    <li>Introducción a Express.js.</li>
+                    <li>Creación de una API básica.</li>
+                    <li>Conexión a una base de datos.</li>
+                </ul>
+        
+                <strong>Día 9:</strong> Desarrollo de un proyecto práctico utilizando los conceptos aprendidos.
+                <ul class="list-disc ml-5">
+                    <li>Aplicación de todos los conceptos aprendidos en un proyecto práctico.</li>
+                </ul>
+            </p>
+        </div>
+        
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">¿Cuenta con certificado?</h3>
+            <p class="text-lg text-white">
+                Se otorgará un certificado luego de haber completado el curso de manera exitosa.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">HORARIO DEL CURSO</h3>
+            <p class="text-lg text-white">
+                DOMINGOS<br>
+                <strong>HORARIOS:</strong> 7:00 pm - 10:00 pm<br>
+                <strong>HORAS:</strong> 24 HORAS<br>
+                <strong>INICIA:</strong> 8 de Setiembre<br>
+                <strong>TERMINA:</strong> 27 de Octubre
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">COSTO DEL CURSO</h3> <br>
+            <p class="text-lg text-white">
+                
+                <strong>COSTO: </strong> 120 SOLES<br>
+                
+            </p>
+        </div>
+
+        <!-- Botón de Inscribirse -->
+        <div class="text-center">
+            <a href="https://wa.me/51976783049" class="button">Inscribirse</a> <!-- Enlace a WhatsApp -->
+        </div>
+    </div>
+
+    
+        <%- include('partials/footer') %>
+    
+</body>
+</html>

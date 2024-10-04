@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Python</title>
+    <style>
+        body {
+            background-color: #A3D5E5; /* Color celeste */
+            color: #ffffff; /* Color de texto blanco */
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            max-width: 1200px; /* Max width for the container */
+            margin: 0 auto; /* Center container */
+            padding: 20px; /* Padding around the content */
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1B2C64; /* Color del título */
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #1B2C64; /* Fondo de tarjeta */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+            padding: 20px; /* Espaciado interno */
+            margin-bottom: 20px; /* Espaciado entre tarjetas */
+            transition: transform 0.2s; /* Efecto de hover */
+        }
+        .card:hover {
+            transform: translateY(-5px); /* Efecto de elevación */
+        }
+        h3 {
+            font-size: 1.8rem; /* Tamaño de los subtítulos */
+            margin-bottom: 10px; /* Espaciado inferior */
+        }
+        p {
+            font-size: 1.1rem; /* Tamaño de texto para párrafos */
+            line-height: 1.6; /* Espaciado entre líneas */
+        }
+        ul {
+            padding-left: 20px; /* Espaciado izquierdo para listas */
+        }
+        .footer {
+            text-align: center; /* Centrar el pie de página */
+            padding: 10px 0; /* Espaciado vertical */
+            background-color: #1B2C64; /* Color de fondo del pie de página */
+            color: white; /* Color de texto en el pie de página */
+            margin-top: 20px; /* Espaciado superior */
+        }
+        .button {
+            display: inline-block; /* Mostrar como un bloque en línea */
+            background-color: #1B2C64; /* Color del botón */
+            color: white; /* Color de texto del botón */
+            padding: 10px 20px; /* Espaciado interno del botón */
+            border-radius: 5px; /* Bordes redondeados */
+            text-decoration: none; /* Quitar subrayado */
+            font-size: 1.2rem; /* Tamaño de fuente */
+            margin-top: 20px; /* Espaciado superior */
+            transition: background-color 0.3s; /* Efecto de transición */
+        }
+        .button:hover {
+            background-color: #0d1b34; /* Color al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/navigation') %>
+    
+    <div class="container py-16">
+        <h2 class="text-3xl font-bold mb-8">DESCRIPCIÓN DEL CURSO DE PYTHON</h2>
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">ENCARGADO DEL CURSO:</h3>
+            <div class="flex items-center mb-4">
+                <img src="/img/leo.jpg" alt="Leonardo Palomino" class="w-24 h-24 rounded-full mr-4"> <!-- Aumentar tamaño -->
+                <p class="text-lg text-white">
+                    <strong>LEONARDO PALOMINO</strong><br>
+                    Programador Full Stack y Creador de La Casa Informática
+                </p>
+            </div>
+        </div>
+        
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">BALOTARIO DEL CURSO</h3>
+            <p class="text-lg text-white">
+                <strong>Día 1:</strong> Introducción a Python, Instalación de Python, variables y tipos de datos básicos<br>
+                <strong>Día 2:</strong> Estructuras de control, condicionales y bucles<br>
+                <strong>Día 3:</strong> Funciones en Python<br>
+                <strong>Día 4:</strong> Listas, tuplas y diccionarios<br>
+                <strong>Día 5:</strong> Programación Orientada a Objetos (POO)<br>
+                <strong>Día 6:</strong> Herencia y polimorfismo en Python<br>
+                <strong>Día 7:</strong> Gestión de archivos y módulos en Python<br>
+                <strong>Día 8:</strong> Introducción a Pandas: Series y DataFrames. Creación y manipulación básica de Series y DataFrames<br>
+                <strong>Día 9:</strong> Introducción a NumPy: arreglos, operaciones básicas y funciones útiles y visualización de datos
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">¿Cuenta con certificado?</h3>
+            <p class="text-lg text-white">
+                Se otorgará un certificado luego de haber completado el curso de manera exitosa.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">HORARIO DEL CURSO</h3>
+            <p class="text-lg text-white">
+                SÁBADOS<br>
+                <strong>HORARIOS:</strong> 7:00 pm - 10:00 pm<br>
+                <strong>HORAS:</strong> 24 HORAS<br>
+                <strong>INICIA:</strong> 7 de Setiembre<br>
+                <strong>TERMINA:</strong> 26 de Octubre
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">COSTO DEL CURSO</h3> <br>
+            <p class="text-lg text-white">
+                
+                <strong>COSTO: </strong> 120 SOLES<br>
+                
+            </p>
+        </div>
+
+        <!-- Botón de Inscribirse -->
+        <div class="text-center">
+            <a href="https://wa.me/51976783049" class="button">Inscribirse</a> <!-- Enlace a WhatsApp -->
+        </div>
+    </div>
+
+    
+        <%- include('partials/footer') %>
+    
+</body>
+</html>
