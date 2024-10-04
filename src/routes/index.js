@@ -1,5 +1,4 @@
 import { Router } from "express"
-import { guardarPelicula, TraerPeliculas } from "../services/conexion.mjs"
 
 const router= Router()
 

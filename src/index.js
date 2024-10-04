@@ -9,11 +9,6 @@ import { Conectar } from './services/conexion.mjs';
 const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-// Configurar CORS
-app.use(cors({
-  origin: 'https://app-movies-5.onrender.com' // Permite solicitudes desde tu dominio desplegado
-}));
-
 app.use(express.json());
 app.set('views', join(__dirname, 'views'));
 app.set('view engine', 'ejs');
