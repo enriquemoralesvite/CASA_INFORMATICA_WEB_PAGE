@@ -6,20 +6,35 @@
     <title><%= title %></title>
     
     <style>
-        body {
+       body {
             background-color: #A3D5E5; /* Color celeste */
             color: white; /* Color de texto blanco por defecto */
             margin: 0; /* Eliminar márgenes por defecto del body */
         }
         .card {
-            background-color: #2D3748; /* Color de fondo de la tarjeta */
-            border-radius: 8px; /* Bordes redondeados */
-            padding: 10px; /* Espaciado interno reducido */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-            transition: transform 0.2s; /* Efecto de transición */
-            flex: 1 1 calc(35% - 10px); /* Dos tarjetas por fila con espaciado y tamaño reducido */
-            margin: 10px; /* Espaciado entre las tarjetas */
-        }
+    background-color: #2D3748; /* Color de fondo de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno reducido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.2s; /* Efecto de transición */
+    flex: 1 1 calc(25% - 20px); /* Cuatro tarjetas por fila */
+    margin: 30px; /* Espaciado entre las tarjetas */
+    max-width: 500px; /* Tamaño máximo de las tarjetas */
+}
+
+/* Media query para pantallas más pequeñas (como móviles) */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Dos tarjetas por fila */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* Una tarjeta por fila en pantallas muy pequeñas */
+    }
+}
+
         
         .card img {
             max-width: 100%; /* Imagen responsive */
@@ -40,7 +55,7 @@
 
     <main class="flex min-h-screen flex-col items-center">
         <h1 class="text-4xl font-bold text-center my-6">
-            CATÁLOGO DE TALLERES
+            CATÁLOGO DE CURSOS
         </h1>
     
         <div class="card-container">
@@ -61,6 +76,8 @@
                     Más información
                 </a>
             </div>
+        </div>
+        <div class="card-container">
             <div class="card">
                 <img src="/img/react.jpeg" alt="Taller de Diseño Gráfico" />
                 <h2 class="text-xl font-semibold">Curso de React</h2>

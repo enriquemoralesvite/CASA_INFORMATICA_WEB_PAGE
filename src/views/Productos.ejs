@@ -12,15 +12,29 @@
             margin: 0; /* Eliminar márgenes por defecto del body */
         }
         .card {
-            background-color: #2D3748; /* Color de fondo de la tarjeta */
-            border-radius: 8px; /* Bordes redondeados */
-            padding: 10px; /* Espaciado interno reducido */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-            transition: transform 0.2s; /* Efecto de transición */
-            flex: 1 1 calc(25% - 20px); /* Cuatro tarjetas por fila */
-            margin: 10px; /* Espaciado entre las tarjetas */
-            max-width: 300px; /* Tamaño máximo de las tarjetas */
-        }
+    background-color: #2D3748; /* Color de fondo de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno reducido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.2s; /* Efecto de transición */
+    flex: 1 1 calc(25% - 20px); /* Cuatro tarjetas por fila */
+    margin: 30px; /* Espaciado entre las tarjetas */
+    max-width: 450px; /* Tamaño máximo de las tarjetas */
+}
+
+/* Media query para pantallas más pequeñas (como móviles) */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Dos tarjetas por fila */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* Una tarjeta por fila en pantallas muy pequeñas */
+    }
+}
+
         
         .card img {
             max-width: 100%; /* Imagen responsive */
@@ -55,6 +69,15 @@
                 </a>
             </div>
             <div class="card">
+                <img src="/img/polo.jpeg" alt="Polo de Caja Información" />
+                <h2 class="text-xl font-semibold">Polo de Caja Información</h2>
+                <p class="text-gray-300">Precio: 60 soles</p>
+                <a href="https://wa.me/51976783049?text=Hola%20me%20interesa%20el%20Polo%20de%20Caja%20Información" 
+                   class="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-3 rounded inline-block">
+                    Solicitar compra
+                </a>
+            </div>
+            <div class="card">
                 <img src="/img/taza.jpeg" alt="Taza" />
                 <h2 class="text-xl font-semibold">Taza</h2>
                 <p class="text-gray-300">Precio: 15 soles</p>
@@ -63,6 +86,7 @@
                     Solicitar compra
                 </a>
             </div>
+            
         </div>
 
         <!-- Separate row for Gorra and Caja Informática -->
@@ -77,6 +101,25 @@
                 </a>
             </div>
             <div class="card">
+                <img src="/img/gorra.jpeg" alt="Gorra" />
+                <h2 class="text-xl font-semibold">Gorra</h2>
+                <p class="text-gray-300">Precio: 30 soles</p>
+                <a href="https://wa.me/51976783049?text=Hola%20me%20interesa%20la%20Gorra" 
+                   class="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-3 rounded inline-block">
+                    Solicitar compra
+                </a>
+            </div>
+            
+            <div class="card">
+                <img src="/img/taza.jpeg" alt="Taza" />
+                <h2 class="text-xl font-semibold">Taza</h2>
+                <p class="text-gray-300">Precio: 15 soles</p>
+                <a href="https://wa.me/51976783049?text=Hola%20me%20interesa%20la%20Taza" 
+                   class="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-3 rounded inline-block">
+                    Solicitar compra
+                </a>
+            </div>
+            <div class="card">
                 <img src="/img/Caja.jpeg" alt="Caja Informática" />
                 <h2 class="text-xl font-semibold">Caja Informática</h2>
                 <p class="text-gray-300">Precio: 100 soles</p>
@@ -84,7 +127,9 @@
                    class="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-3 rounded inline-block">
                     Solicitar compra
                 </a>
+                
             </div>
+            
         </div>
     </main><br><br>
 
