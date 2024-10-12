@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Python</title>
+    <title>Curso de JavaScript</title>
     <style>
         body {
             background-color: #A3D5E5; /* Color celeste */
@@ -23,13 +23,15 @@
             margin-bottom: 20px;
         }
         .card {
-            background-color: #1B2C64; /* Fondo de tarjeta */
-            border-radius: 10px; /* Bordes redondeados */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
-            padding: 20px; /* Espaciado interno */
-            margin-bottom: 20px; /* Espaciado entre tarjetas */
-            transition: transform 0.2s; /* Efecto de hover */
-        }
+    background-color: #1B2C64; /* Fondo de tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espaciado entre tarjetas */
+    transition: transform 0.2s; /* Efecto de hover */
+    padding-left: 40px; /* Ajusta este valor para mover el contenido ligeramente a la derecha */
+}
+
         .card:hover {
             transform: translateY(-5px); /* Efecto de elevación */
         }
@@ -52,18 +54,33 @@
             margin-top: 20px; /* Espaciado superior */
         }
         .button {
-            display: inline-block; /* Mostrar como un bloque en línea */
-            background-color: #1B2C64; /* Color del botón */
-            color: white; /* Color de texto del botón */
-            padding: 10px 20px; /* Espaciado interno del botón */
-            border-radius: 5px; /* Bordes redondeados */
-            text-decoration: none; /* Quitar subrayado */
-            font-size: 1.2rem; /* Tamaño de fuente */
-            margin-top: 20px; /* Espaciado superior */
-            transition: background-color 0.3s; /* Efecto de transición */
+    display: inline-block;
+    background: linear-gradient(135deg, #1B2C64, #3C6EB0); /* Degradado de color */
+    color: white;
+    padding: 15px 30px; /* Aumentar el espaciado */
+    border-radius: 30px; /* Bordes más redondeados */
+    text-decoration: none;
+    font-size: 1.3rem; /* Tamaño de fuente más grande */
+    margin-top: 20px;
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más grande */
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #3C6EB0, #1B2C64); /* Cambiar el degradado al pasar el mouse */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Aumentar la sombra */
+    transform: translateY(-3px); /* Elevar un poco el botón */
+}
+
+        .flex {
+            display: flex;
+            align-items: center;
         }
-        .button:hover {
-            background-color: #0d1b34; /* Color al pasar el mouse */
+        .rounded-full {
+            border-radius: 50%;
+        }
+        .mb-4 {
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -71,7 +88,8 @@
     <%- include('partials/navigation') %>
     
     <div class="container py-16">
-        <h2 class="text-3xl font-bold mb-8">DESCRIPCIÓN DEL CURSO DE JAVASCRIPT</h2>
+        <h2 class="text-3xl font-bold mb-8" style="color: black;">DESCRIPCIÓN DEL CURSO DE JAVASCRIPT</h2>
+
 
         <div class="card">
             <h3 class="text-2xl font-bold text-white">ENCARGADO DEL CURSO:</h3>
@@ -83,106 +101,71 @@
                 </p>
             </div>
         </div>
-        
 
         <div class="card">
             <h3 class="text-2xl font-bold text-white">BALOTARIO DEL CURSO DE JAVASCRIPT</h3>
-            <p class="text-lg text-white">
-                <strong>Día 1:</strong> Introducción a JavaScript y su entorno de desarrollo, variables y tipos de datos.
-                <ul class="list-disc ml-5">
-                    <li>Introducción a JavaScript.</li>
-                    <li>Configuración del entorno de desarrollo.</li>
-                    <li>Variables y tipos de datos.</li>
-                </ul>
-        
-                <strong>Día 2:</strong> Operadores y expresiones y estructuras de control: if, else, switch.
-                <ul class="list-disc ml-5">
-                    <li>Operadores aritméticos, lógicos y relacionales.</li>
-                    <li>Control de flujo: if, else, switch.</li>
-                </ul>
-        
-                <strong>Día 3:</strong> Bucles: for, while, do-while, arreglos y colecciones básicas.
-                <ul class="list-disc ml-5">
-                    <li>Bucles en JavaScript: for, while, do-while.</li>
-                    <li>Introducción a arreglos: declaración, inicialización y uso.</li>
-                    <li>Colecciones básicas.</li>
-                </ul>
-        
-                <strong>Día 4:</strong> Métodos y funciones, introducción a la POO en JavaScript: Clases y Objetos.
-                <ul class="list-disc ml-5">
-                    <li>Definición y uso de métodos y funciones.</li>
-                    <li>Conceptos básicos de Programación Orientada a Objetos (POO): Clases y Objetos.</li>
-                </ul>
-        
-                <strong>Día 5:</strong> Herencia y polimorfismo, Encapsulamiento y constructores.
-                <ul class="list-disc ml-5">
-                    <li>Herencia y polimorfismo en JavaScript.</li>
-                    <li>Encapsulamiento y constructores.</li>
-                </ul>
-        
-                <strong>Día 6:</strong> Interfaces y abstracción, práctica y revisión de conceptos.
-                <ul class="list-disc ml-5">
-                    <li>Definición y uso de interfaces.</li>
-                    <li>Abstracción y revisión de conceptos.</li>
-                </ul>
-        
-                <strong>Día 7:</strong> Introducción a Node.js y npm, manipulación del DOM y eventos en JavaScript.
-                <ul class="list-disc ml-5">
-                    <li>Introducción a Node.js y npm.</li>
-                    <li>Manipulación del DOM.</li>
-                    <li>Eventos en JavaScript.</li>
-                </ul>
-        
-                <strong>Día 8:</strong> Introducción a Express.js y creación de una API básica, conexión a una base de datos con Node.js y Express.js.
-                <ul class="list-disc ml-5">
-                    <li>Introducción a Express.js.</li>
-                    <li>Creación de una API básica.</li>
-                    <li>Conexión a una base de datos.</li>
-                </ul>
-        
-                <strong>Día 9:</strong> Desarrollo de un proyecto práctico utilizando los conceptos aprendidos.
-                <ul class="list-disc ml-5">
-                    <li>Aplicación de todos los conceptos aprendidos en un proyecto práctico.</li>
-                </ul>
-            </p>
+            <br><p class="text-lg text-white">
+                <strong>HORAS DE CLASE:</strong> 24 HORAS<br>
+            </p><br>
+            <ul class="list-disc ml-5">
+                <li><strong>Día 1:</strong> Introducción a JavaScript, entorno de desarrollo, variables y tipos de datos.</li>
+                <li><strong>Día 2:</strong> Operadores, expresiones y estructuras de control: if, else, switch, bucles (for, while, do-while).</li>
+                <li><strong>Día 3:</strong> Arreglos, colecciones básicas y manipulación de datos.</li>
+                <li><strong>Día 4:</strong> Métodos, funciones, clases y objetos (Introducción a la POO en JavaScript).</li>
+                <li><strong>Día 5:</strong> Herencia y polimorfismo. Introducción a Git, GitHub y librerías populares en JavaScript.</li>
+                <li><strong>Día 6:</strong> Node.js, npm, y Express.js. Manipulación del DOM y eventos en JavaScript.</li>
+                <li><strong>Día 7:</strong> Conexión a una base de datos con Node.js y Express.js. Deployamiento de la aplicación web.</li>
+                <li><strong>Día 8:</strong> Revisión final del proyecto. Optimización, pruebas y deployamiento.</li>
+            </ul><br>
+          
         </div>
-        
 
         <div class="card">
-            <h3 class="text-2xl font-bold text-white">¿Cuenta con certificado?</h3>
+            <h3 class="text-2xl font-bold text-white">HORARIO DEL CURSO</h3><br>
+            <p class="text-lg text-white">
+                <strong>DURACIÓN:</strong> 2 MESES (NOVIEMBRE Y DICIEMBRE)<br>
+                <strong>INICIO:</strong> 10 DE NOVIEMBRE<br>
+                <strong>FINAL:</strong> 29 DE DICIEMBRE<br>
+                <strong>HORARIO:</strong> DOMINGO 7:00 PM – 10:00 PM (HORA PERUANA)<br>
+            </p><br>
+        </div>
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">¿Cuenta con certificado?</h3><br>
             <p class="text-lg text-white">
                 Se otorgará un certificado luego de haber completado el curso de manera exitosa.
-            </p>
+            </p><br>
         </div>
 
         <div class="card">
-            <h3 class="text-2xl font-bold text-white">HORARIO DEL CURSO</h3>
+            <h3 class="text-2xl font-bold text-white">COSTO DEL CURSO</h3><br>
             <p class="text-lg text-white">
-                DOMINGOS<br>
-                <strong>HORARIOS:</strong> 7:00 pm - 10:00 pm<br>
-                <strong>HORAS:</strong> 24 HORAS<br>
-                <strong>INICIA:</strong> 8 de Setiembre<br>
-                <strong>TERMINA:</strong> 27 de Octubre
-            </p>
+                <strong>COSTO:</strong> 120 SOLES
+            </p><br>
         </div>
-
         <div class="card">
-            <h3 class="text-2xl font-bold text-white">COSTO DEL CURSO</h3> <br>
+            <h3 class="text-2xl font-bold text-white">¿CÓMO SE REALIZAN LAS CLASES?</h3><br>
             <p class="text-lg text-white">
-                
-                <strong>COSTO: </strong> 120 SOLES<br>
-                
+                Las clases se llevarán a cabo en un ambiente virtual a través de Zoom, donde la interacción y el aprendizaje colaborativo serán clave. Cada sesión será grabada, permitiéndote revisitar los conceptos cuando lo desees.
             </p>
+            <p class="text-lg text-white">
+                Nos enfocaremos en la práctica mediante emocionantes proyectos y ejercicios que desafiarán tus habilidades. Con cada tarea, estarás construyendo un portafolio que refleje tu crecimiento como desarrollador. ¡Prepárate para un viaje de aprendizaje transformador!
+            </p><br>
         </div>
-
+        <div class="text-center">
+            <a href="/promociones" class="button"> ¡No te pierdas nuestras promociones por la compra de más de 1 curso!</a> <!-- Enlace a la vista de promociones -->
+        </div>
+        
         <!-- Botón de Inscribirse -->
         <div class="text-center">
-            <a href="https://wa.me/51976783049" class="button">Inscribirse</a> <!-- Enlace a WhatsApp -->
+            <a href="https://wa.me/51976783049?text=%C2%A1Hola%2C%20me%20interesa%20el%20curso%20de%20JavaScript%21" class="button" target="_blank">Inscribirse al curso</a> <!-- Enlace a WhatsApp con mensaje predeterminado que se abre en una nueva pestaña -->
         </div>
+        
+
+        
     </div>
 
-    
-        <%- include('partials/footer') %>
+    <%- include('partials/footer') %>
     
 </body>
 </html>

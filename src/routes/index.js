@@ -14,6 +14,6 @@ router.get('/informacionPython',(req,res)=> res.render('informacionPython',{titl
 router.get('/informacionJava',(req,res)=> res.render('informacionJava',{title: 'Java' }))
 router.get('/informacionJavascript',(req,res)=> res.render('informacionJavascript',{title: 'Javascript' }))
 router.get('/informacionReact',(req,res)=> res.render('informacionReact',{title: 'React' }))
-
+router.get('/informacionMovil',(req,res)=> res.render('informacionMovil',{title: 'Movil' }))
 
 export default router

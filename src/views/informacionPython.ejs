@@ -29,6 +29,7 @@
             padding: 20px; /* Espaciado interno */
             margin-bottom: 20px; /* Espaciado entre tarjetas */
             transition: transform 0.2s; /* Efecto de hover */
+            padding-left: 40px; /* Ajusta este valor para mover el contenido ligeramente a la derecha */
         }
         .card:hover {
             transform: translateY(-5px); /* Efecto de elevación */
@@ -52,18 +53,31 @@
             margin-top: 20px; /* Espaciado superior */
         }
         .button {
-            display: inline-block; /* Mostrar como un bloque en línea */
-            background-color: #1B2C64; /* Color del botón */
-            color: white; /* Color de texto del botón */
-            padding: 10px 20px; /* Espaciado interno del botón */
-            border-radius: 5px; /* Bordes redondeados */
-            text-decoration: none; /* Quitar subrayado */
-            font-size: 1.2rem; /* Tamaño de fuente */
-            margin-top: 20px; /* Espaciado superior */
-            transition: background-color 0.3s; /* Efecto de transición */
+            display: inline-block;
+            background: linear-gradient(135deg, #1B2C64, #3C6EB0); /* Degradado de color */
+            color: white;
+            padding: 15px 30px; /* Aumentar el espaciado */
+            border-radius: 30px; /* Bordes más redondeados */
+            text-decoration: none;
+            font-size: 1.3rem; /* Tamaño de fuente más grande */
+            margin-top: 20px;
+            transition: all 0.3s ease; /* Transición suave para todos los cambios */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más grande */
         }
         .button:hover {
-            background-color: #0d1b34; /* Color al pasar el mouse */
+            background: linear-gradient(135deg, #3C6EB0, #1B2C64); /* Cambiar el degradado al pasar el mouse */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Aumentar la sombra */
+            transform: translateY(-3px); /* Elevar un poco el botón */
+        }
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+        .rounded-full {
+            border-radius: 50%;
+        }
+        .mb-4 {
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -71,7 +85,8 @@
     <%- include('partials/navigation') %>
     
     <div class="container py-16">
-        <h2 class="text-3xl font-bold mb-8">DESCRIPCIÓN DEL CURSO DE PYTHON</h2>
+        <h2 class="text-3xl font-bold mb-8" style="color: black;">DESCRIPCIÓN DEL CURSO DE PYTHON</h2>
+
 
         <div class="card">
             <h3 class="text-2xl font-bold text-white">ENCARGADO DEL CURSO:</h3>
@@ -83,58 +98,68 @@
                 </p>
             </div>
         </div>
-        
 
         <div class="card">
-            <h3 class="text-2xl font-bold text-white">BALOTARIO DEL CURSO</h3>
-            <p class="text-lg text-white">
-                <strong>Día 1:</strong> Introducción a Python, Instalación de Python, variables y tipos de datos básicos<br>
-                <strong>Día 2:</strong> Estructuras de control, condicionales y bucles<br>
-                <strong>Día 3:</strong> Funciones en Python<br>
-                <strong>Día 4:</strong> Listas, tuplas y diccionarios<br>
-                <strong>Día 5:</strong> Programación Orientada a Objetos (POO)<br>
-                <strong>Día 6:</strong> Herencia y polimorfismo en Python<br>
-                <strong>Día 7:</strong> Gestión de archivos y módulos en Python<br>
-                <strong>Día 8:</strong> Introducción a Pandas: Series y DataFrames. Creación y manipulación básica de Series y DataFrames<br>
-                <strong>Día 9:</strong> Introducción a NumPy: arreglos, operaciones básicas y funciones útiles y visualización de datos
-            </p>
+            <h3 class="text-2xl font-bold text-white">BALOTARIO DEL CURSO DE PYTHON</h3>
+            <br><p class="text-lg text-white">
+                <strong>HORAS DE CLASE:</strong> 24 HORAS<br>
+            </p><br>
+            <ul class="list-disc ml-5">
+                <li><strong>Día 1:</strong> Introducción a Python, instalación, variables y tipos de datos básicos. Grabación disponible.</li>
+                <li><strong>Día 2:</strong> Estructuras de control: condicionales y bucles. Práctica y tareas. Grabación disponible.</li>
+                <li><strong>Día 3:</strong> Funciones en Python. Listas, tuplas y diccionarios. Práctica y tareas. Grabación disponible.</li>
+                <li><strong>Día 4:</strong> Programación Orientada a Objetos (POO): clases, objetos, encapsulamiento, herencia y polimorfismo. Práctica y tareas. Grabación disponible.</li>
+                <li><strong>Día 5:</strong> Introducción a Git y GitHub: control de versiones y gestión de proyectos. Introducción a Pandas: Series y DataFrames, creación y manipulación básica. Inicio del Proyecto práctico: uso de Pandas para procesar datos. Práctica y tareas. Grabación disponible.</li>
+                <li><strong>Día 6:</strong> Introducción a NumPy: arreglos, operaciones básicas y funciones útiles. Continuación del Proyecto práctico: integración de NumPy. Práctica y tareas. Grabación disponible.</li>
+                <li><strong>Día 7:</strong> Conexión a bases de datos y manejo de archivos en Python. Desarrollo del Proyecto práctico: almacenamiento y procesamiento de datos con Pandas y NumPy. Grabación disponible.</li>
+                <li><strong>Día 8:</strong> Revisión final del proyecto. Optimización, pruebas, integración de GitHub y deployamiento. Grabación disponible.</li>
+            </ul><br>
+          
         </div>
 
         <div class="card">
-            <h3 class="text-2xl font-bold text-white">¿Cuenta con certificado?</h3>
+            <h3 class="text-2xl font-bold text-white">HORARIO DEL CURSO</h3><br>
+            <p class="text-lg text-white">
+                <strong>DURACIÓN:</strong> 2 MESES (NOVIEMBRE Y DICIEMBRE)<br>
+                <strong>INICIO:</strong> 9 DE NOVIEMBRE<br>
+                <strong>FINAL:</strong> 28 DE DICIEMBRE<br>
+                <strong>HORARIO:</strong> SÁBADOS 7:00 PM – 10:00 PM (HORA PERUANA)<br>
+            </p><br>
+        </div>
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">¿Cuenta con certificado?</h3><br>
             <p class="text-lg text-white">
                 Se otorgará un certificado luego de haber completado el curso de manera exitosa.
-            </p>
+            </p><br>
         </div>
 
         <div class="card">
-            <h3 class="text-2xl font-bold text-white">HORARIO DEL CURSO</h3>
+            <h3 class="text-2xl font-bold text-white">COSTO DEL CURSO</h3><br>
             <p class="text-lg text-white">
-                SÁBADOS<br>
-                <strong>HORARIOS:</strong> 7:00 pm - 10:00 pm<br>
-                <strong>HORAS:</strong> 24 HORAS<br>
-                <strong>INICIA:</strong> 7 de Setiembre<br>
-                <strong>TERMINA:</strong> 26 de Octubre
-            </p>
+                <strong>COSTO:</strong> 120 SOLES
+            </p><br>
         </div>
-
         <div class="card">
-            <h3 class="text-2xl font-bold text-white">COSTO DEL CURSO</h3> <br>
+            <h3 class="text-2xl font-bold text-white">¿CÓMO SE REALIZAN LAS CLASES?</h3><br>
             <p class="text-lg text-white">
-                
-                <strong>COSTO: </strong> 120 SOLES<br>
-                
+                Las clases se llevarán a cabo en un ambiente virtual a través de Zoom, donde la interacción y el aprendizaje colaborativo serán clave. Cada sesión será grabada, permitiéndote revisitar los conceptos cuando lo desees.
             </p>
+            <p class="text-lg text-white">
+                Nos enfocaremos en la práctica mediante emocionantes proyectos y ejercicios que desafiarán tus habilidades. Con cada tarea, estarás construyendo un portafolio que refleje tu crecimiento como desarrollador. ¡Prepárate para un viaje de aprendizaje transformador!
+            </p><br>
         </div>
-
+        <div class="text-center">
+            <a href="/promociones" class="button"> ¡No te pierdas nuestras promociones por la compra de más de 1 curso!</a> <!-- Enlace a la vista de promociones -->
+        </div>
+        
         <!-- Botón de Inscribirse -->
         <div class="text-center">
-            <a href="https://wa.me/51976783049" class="button">Inscribirse</a> <!-- Enlace a WhatsApp -->
+            <a href="https://wa.me/51976783049?text=%C2%A1Hola%2C%20me%20interesa%20el%20curso%20de%20Python%21" class="button" target="_blank">Inscribirse al curso</a> <!-- Enlace a WhatsApp con mensaje predeterminado que se abre en una nueva pestaña -->
         </div>
     </div>
-
-    
-        <%- include('partials/footer') %>
-    
+    <div class="footer">
+        <p>&copy; 2024 La Casa Informática. Todos los derechos reservados.</p>
+    </div>
 </body>
 </html>

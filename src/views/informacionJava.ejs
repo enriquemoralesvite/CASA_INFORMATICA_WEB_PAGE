@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +29,9 @@
             padding: 20px; /* Espaciado interno */
             margin-bottom: 20px; /* Espaciado entre tarjetas */
             transition: transform 0.2s; /* Efecto de hover */
+            padding-left: 40px; /* Ajusta este valor para mover el contenido ligeramente a la derecha */
         }
+
         .card:hover {
             transform: translateY(-5px); /* Efecto de elevación */
         }
@@ -52,18 +54,33 @@
             margin-top: 20px; /* Espaciado superior */
         }
         .button {
-            display: inline-block; /* Mostrar como un bloque en línea */
-            background-color: #1B2C64; /* Color del botón */
-            color: white; /* Color de texto del botón */
-            padding: 10px 20px; /* Espaciado interno del botón */
-            border-radius: 5px; /* Bordes redondeados */
-            text-decoration: none; /* Quitar subrayado */
-            font-size: 1.2rem; /* Tamaño de fuente */
-            margin-top: 20px; /* Espaciado superior */
-            transition: background-color 0.3s; /* Efecto de transición */
+            display: inline-block;
+            background: linear-gradient(135deg, #1B2C64, #3C6EB0); /* Degradado de color */
+            color: white;
+            padding: 15px 30px; /* Aumentar el espaciado */
+            border-radius: 30px; /* Bordes más redondeados */
+            text-decoration: none;
+            font-size: 1.3rem; /* Tamaño de fuente más grande */
+            margin-top: 20px;
+            transition: all 0.3s ease; /* Transición suave para todos los cambios */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más grande */
         }
+
         .button:hover {
-            background-color: #0d1b34; /* Color al pasar el mouse */
+            background: linear-gradient(135deg, #3C6EB0, #1B2C64); /* Cambiar el degradado al pasar el mouse */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Aumentar la sombra */
+            transform: translateY(-3px); /* Elevar un poco el botón */
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+        .rounded-full {
+            border-radius: 50%;
+        }
+        .mb-4 {
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -71,121 +88,80 @@
     <%- include('partials/navigation') %>
     
     <div class="container py-16">
-        <h2 class="text-3xl font-bold mb-8">DESCRIPCIÓN DEL CURSO DE JAVA</h2>
+        <h2 class="text-3xl font-bold mb-8" style="color: black;">DESCRIPCIÓN DEL CURSO DE JAVA</h2>
 
         <div class="card">
             <h3 class="text-2xl font-bold text-white">ENCARGADO DEL CURSO:</h3>
             <div class="flex items-center mb-4">
-                <img src="/img/leo.jpg" alt="Leonardo Palomino" class="w-24 h-24 rounded-full mr-4"> <!-- Aumentar tamaño -->
+                <img src="/img/yasser.jpeg" alt="Yasser Ávalos" class="w-24 h-24 rounded-full mr-4"> <!-- Aumentar tamaño -->
                 <p class="text-lg text-white">
-                    <strong>LEONARDO PALOMINO</strong><br>
-                    Programador Full Stack y Creador de La Casa Informática
+                    <strong>YASSER ÁVALOS</strong><br>
+                    Programador Backend de La Casa Informática
                 </p>
             </div>
         </div>
-        
 
         <div class="card">
-            <h3 class="text-2xl font-bold text-white">BALOTARIO DEL CURSO</h3>
-            <p class="text-lg text-white">
-                <strong>Día 1:</strong> Introducción a Java y su entorno de desarrollo, variables y tipos de datos
-                <ul class="list-disc ml-5">
-                    <li>Historia y características de Java.</li>
-                    <li>Instalación y configuración del JDK y un entorno de desarrollo (IDE).</li>
-                    <li>Primeros pasos: "Hello, World!" en Java.</li>
-                    <li>Tipos de datos primitivos y variables.</li>
-                </ul>
-        
-                <strong>Día 2:</strong> Operadores y expresiones, estructuras de control: if, else, switch
-                <ul class="list-disc ml-5">
-                    <li>Operadores aritméticos, lógicos y relacionales.</li>
-                    <li>Expresiones en Java.</li>
-                    <li>Control de flujo: if, else, switch.</li>
-                </ul>
-        
-                <strong>Día 3:</strong> Bucles: for, while, do-while, arreglos y colecciones básicas
-                <ul class="list-disc ml-5">
-                    <li>Bucles en Java: for, while, do-while.</li>
-                    <li>Introducción a arreglos: declaración, inicialización y uso.</li>
-                    <li>Colecciones básicas: ArrayList, HashMap.</li>
-                    <li>Creación y uso de métodos en Java.</li>
-                </ul>
-        
-                <strong>Día 4:</strong> Métodos y funciones, introducción a la POO en Java: Clases y Objetos
-                <ul class="list-disc ml-5">
-                    <li>Conceptos básicos de Programación Orientada a Objetos (POO): Clases y Objetos.</li>
-                    <li>Modificadores de acceso y encapsulamiento.</li>
-                    <li>Herencia.</li>
-                    <li>Polimorfismo en Java.</li>
-                    <li>Uso de constructores y sobrecarga de métodos.</li>
-                </ul>
-        
-                <strong>Día 5:</strong> Interfaces, abstracción y práctica
-                <ul class="list-disc ml-5">
-                    <li>Definición y uso de interfaces en Java.</li>
-                    <li>Abstracción y clases abstractas.</li>
-                    <li>Ejercicios prácticos para implementar interfaces y clases abstractas.</li>
-                </ul>
-        
-                <strong>Día 6:</strong> Introducción a Spring Boot y MVC
-                <ul class="list-disc ml-5">
-                    <li>Introducción a Spring Boot: qué es y por qué usarlo.</li>
-                    <li>Creación de un proyecto básico en Spring Boot.</li>
-                    <li>Introducción a MVC (Modelo-Vista-Controlador) en Spring Boot.</li>
-                    <li>Creación de primera web con Spring Boot.</li>
-                </ul>
-        
-                <strong>Día 7:</strong> Integración con bases de datos
-                <ul class="list-disc ml-5">
-                    <li>Implementación de controladores, servicios y repositorios en Spring Boot.</li>
-                    <li>Integración de Spring Boot con bases de datos utilizando JPA/Hibernate.</li>
-                    <li>Creación de una aplicación CRUD completa con Spring Boot.</li>
-                </ul>
-        
-                <strong>Día 8:</strong> Desarrollo de un proyecto práctico utilizando los conceptos aprendidos
-                <ul class="list-disc ml-5">
-                    <li>Desarrollo de un proyecto final integrador.</li>
-                    <li>Aplicación de todos los conceptos aprendidos a lo largo del curso.</li>
-                    <li>Revisión y presentación del proyecto.</li>
-                </ul>
-            </p>
+            <h3 class="text-2xl font-bold text-white">BALOTARIO DEL CURSO DE JAVA</h3>
+            <br><p class="text-lg text-white">
+                <strong>HORAS DE CLASE:</strong> 24 HORAS<br>
+            </p><br>
+            <ul class="list-disc ml-5">
+                <li><strong>Día 1:</strong> Introducción a Java, entorno de desarrollo, variables y tipos de datos.</li>
+                <li><strong>Día 2:</strong> Operadores, expresiones y estructuras de control: if, else, switch, bucles (for, while, do-while).</li>
+                <li><strong>Día 3:</strong> Arreglos y matrices, manipulación de datos.</li>
+                <li><strong>Día 4:</strong> Programación orientada a objetos: clases, objetos, herencia, polimorfismo.</li>
+                <li><strong>Día 5:</strong> Manejo de excepciones y introducción a colecciones.</li>
+                <li><strong>Día 6:</strong> Introducción a Java Streams y lambdas.</li>
+                <li><strong>Día 7:</strong> Uso de API en Java y conexiones a bases de datos (JDBC).</li>
+                <li><strong>Día 8:</strong> Revisión final del proyecto práctico y optimización.</li>
+            </ul><br>
         </div>
-        
 
         <div class="card">
-            <h3 class="text-2xl font-bold text-white">¿Cuenta con certificado?</h3>
+            <h3 class="text-2xl font-bold text-white">HORARIO DEL CURSO</h3><br>
+            <p class="text-lg text-white">
+                <strong>DURACIÓN:</strong> 2 MESES (NOVIEMBRE Y DICIEMBRE)<br>
+                <strong>INICIO:</strong> 10 DE NOVIEMBRE<br>
+                <strong>FINAL:</strong> 29 DE DICIEMBRE<br>
+                <strong>HORARIO:</strong> DOMINGO 7:00 PM – 10:00 PM (HORA PERUANA)<br>
+            </p><br>
+        </div>
+
+        <div class="card">
+            <h3 class="text-2xl font-bold text-white">¿Cuenta con certificado?</h3><br>
             <p class="text-lg text-white">
                 Se otorgará un certificado luego de haber completado el curso de manera exitosa.
-            </p>
+            </p><br>
         </div>
 
         <div class="card">
-            <h3 class="text-2xl font-bold text-white">HORARIO DEL CURSO</h3>
+            <h3 class="text-2xl font-bold text-white">COSTO DEL CURSO</h3><br>
             <p class="text-lg text-white">
-                DOMINGOS<br>
-                <strong>HORARIOS:</strong> 9:00 am - 12:00 pm<br>
-                <strong>HORAS:</strong> 24 HORAS<br>
-                <strong>INICIA:</strong> 8 de Setiembre<br>
-                <strong>TERMINA:</strong> 27 de Octubre
-            </p>
+                <strong>COSTO:</strong> 120 SOLES
+            </p><br>
         </div>
-
+        
         <div class="card">
-            <h3 class="text-2xl font-bold text-white">COSTO DEL CURSO</h3> <br>
+            <h3 class="text-2xl font-bold text-white">¿CÓMO SE REALIZAN LAS CLASES?</h3><br>
             <p class="text-lg text-white">
-                
-                <strong>COSTO: </strong> 120 SOLES<br>
-                
+                Las clases se llevarán a cabo en un ambiente virtual a través de Zoom, donde la interacción y el aprendizaje colaborativo serán clave. Cada sesión será grabada, permitiéndote revisitar los conceptos cuando lo desees.
             </p>
+            <p class="text-lg text-white">
+                Nos enfocaremos en la práctica mediante emocionantes proyectos y ejercicios que desafiarán tus habilidades. Con cada tarea, estarás construyendo un portafolio que refleje tu crecimiento como desarrollador. ¡Prepárate para un viaje de aprendizaje transformador!
+            </p><br>
         </div>
-
+        
+        <div class="text-center">
+            <a href="/promociones" class="button"> ¡No te pierdas nuestras promociones por la compra de más de 1 curso!</a> <!-- Enlace a la vista de promociones -->
+        </div>
+        
         <!-- Botón de Inscribirse -->
         <div class="text-center">
-            <a href="https://wa.me/51976783049" class="button">Inscribirse</a> <!-- Enlace a WhatsApp -->
+            <a href="https://wa.me/51976783049?text=%C2%A1Hola%2C%20me%20interesa%20el%20curso%20de%20Java%21" class="button" target="_blank">Inscribirse al curso</a> <!-- Enlace a WhatsApp con mensaje predeterminado que se abre en una nueva pestaña -->
         </div>
     </div>
 
-    
     <%- include('partials/footer') %>
     
 </body>
