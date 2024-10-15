@@ -1,217 +1,509 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Desarrollo de Aplicaciones Móviles</title>
+    <title>Curso de React Native Expo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #A3D5E5; /* Color celeste */
-            color: #ffffff; /* Color de texto blanco */
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-        }
-        .container {
-            max-width: 1200px; /* Max width for the container */
-            margin: 0 auto; /* Center container */
-            padding: 20px; /* Padding around the content */
-        }
-        h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #1B2C64; /* Color del título */
-            margin-bottom: 20px;
-        }
-        .card {
-            background-color: #1B2C64; /* Fondo de tarjeta */
-            border-radius: 10px; /* Bordes redondeados */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
-            padding: 20px; /* Espaciado interno */
-            margin-bottom: 20px; /* Espaciado entre tarjetas */
-            transition: transform 0.2s; /* Efecto de hover */
-            padding-left: 40px; /* Ajusta este valor para mover el contenido ligeramente a la derecha */
-        }
-
-        .card:hover {
-            transform: translateY(-5px); /* Efecto de elevación */
-        }
-        h3 {
-            font-size: 1.8rem; /* Tamaño de los subtítulos */
-            margin-bottom: 10px; /* Espaciado inferior */
-        }
-        p {
-            font-size: 1.1rem; /* Tamaño de texto para párrafos */
-            line-height: 1.6; /* Espaciado entre líneas */
-        }
-        ul {
-            padding-left: 20px; /* Espaciado izquierdo para listas */
-        }
-        .footer {
-            text-align: center; /* Centrar el pie de página */
-            padding: 10px 0; /* Espaciado vertical */
-            background-color: #1B2C64; /* Color de fondo del pie de página */
-            color: white; /* Color de texto en el pie de página */
-            margin-top: 20px; /* Espaciado superior */
-        }
-        .button {
-            display: inline-block;
-            background: linear-gradient(135deg, #1B2C64, #3C6EB0); /* Degradado de color */
-            color: white;
-            padding: 15px 30px; /* Aumentar el espaciado */
-            border-radius: 30px; /* Bordes más redondeados */
-            text-decoration: none;
-            font-size: 1.3rem; /* Tamaño de fuente más grande */
-            margin-top: 20px;
-            transition: all 0.3s ease; /* Transición suave para todos los cambios */
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más grande */
-        }
-
-        .button:hover {
-            background: linear-gradient(135deg, #3C6EB0, #1B2C64); /* Cambiar el degradado al pasar el mouse */
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Aumentar la sombra */
-            transform: translateY(-3px); /* Elevar un poco el botón */
-        }
-
-        .flex {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            font-family: 'Open Sans', sans-serif;
+            padding: 0;
+            background-color: #A3D5E5;
+            color: white;
+            margin: 0;
+            min-height: 100vh;
         }
-        .rounded-full {
-            border-radius: 50%;
+
+        .contenido {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin: 30px auto;
+            padding: 20px;
+            color: black;
+            flex: 1;
+            max-width: 1200px; /* Limitar el ancho máximo */
+            width: 100%; /* Aseguramos que ocupe todo el ancho */
         }
-        .mb-4 {
-            margin-bottom: 1rem;
+
+        .contenido-text {
+            flex: 1;
+            margin-right: 30px;
+        }
+
+        .video-container {
+            flex: 0 0 auto;
+            margin-top: 20px;
+        }
+
+        .video-container video {
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+        .main-content {
+            font-family: Arial, sans-serif;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            margin-top: 30px;
+            padding: 0 20px; /* Añadir espacio a los lados */
+        }
+
+        .course-container {
+            border-radius: 10px;
+            padding: 25px;
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            color: #f1f1f1;
+            width: 100%;
+            max-width: 900px; /* Limitar el ancho máximo del contenido principal */
+        }
+
+        .course-info {
+            background-color: #28293d;
+            padding: 20px;
+            border-radius: 10px;
+            margin-left: 40px;
+            max-width: 450px;
+            color: #f1f1f1;
+            text-align: center;
+            order: 2;
+            width: 100%;
+            margin-top: 20px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .course-info img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            margin-left: auto;  /* Centrar las imágenes */
+            margin-right: auto; /* Centrar las imágenes */
+        }
+
+        h2, h3 {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 26px;
+            margin-bottom: 25px;
+            color: black; /* Cambiar el título a negro */
+        }
+
+        .section {
+            margin-bottom: 15px;
+            border: 1px solid #5a5a77;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .section-title {
+            color: black;
+            padding: 12px;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s;
+            font-weight: 600;
+        }
+
+        .section-content {
+            display: none;
+            padding: 12px;
+            color: black;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .expand-icon {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .expand-icon.rotate {
+            transform: rotate(90deg);
+        }
+
+        .info {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .info p {
+            margin: 5px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background-color: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            background-color: #e05757;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+            width: 100%;
+            color: white !important;
+        }
+
+        @media (max-width: 800px) {
+            .contenido {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .contenido-text {
+                margin-right: 0;
+                text-align: center;
+                padding: 0 15px; /* Añadido padding para mejorar el espaciado en móviles */
+            }
+
+            .video-container {
+                margin-top: 20px;
+                margin-left: 0;
+            }
+
+            /* Cambiar el orden de los elementos en pantallas pequeñas */
+            .main-content {
+                flex-direction: column;
+                padding: 0 15px; /* Reducir el padding en pantallas pequeñas */
+            }
+
+            /* Aseguramos que el contenedor del curso ocupe todo el ancho disponible */
+            .course-info {
+                margin-left: 0;
+                margin-right: 0;
+                max-width: 100%;
+                margin-top: 20px;
+            }
+
+            /* Hacer que la sección de contenido del curso ocupe más espacio */
+            .course-container {
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 16px; /* Aseguramos que los botones sean más grandes en móviles */
+            }
+            
+        }
+        .table-container {
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: black;
+        }
+        th, td {
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 20px;
+            color: black;
+        }
+        th {
+            background-color: #28293d;
+            color: black;
+            font-weight: bold;
+        }
+        td {
+            background-color: #f1f1f1;
+        }
+        td input[type="checkbox"] {
+    transform: scale(1.5);
+    accent-color: #ff6b6b; /* Cambia el color del checkbox */
+}
+
+        tr:nth-child(even) td {
+            background-color: #e9e9e9;
+        }
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+        .table-header {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background-color: #ff6b6b;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+        }
+        .cta-button:hover {
+            background-color: #e05757;
+        }
+        
+
+        /* Ajustes adicionales para imágenes en dispositivos móviles */
+        @media (max-width: 600px) {
+            .course-info img {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
         }
     </style>
 </head>
+
 <body>
     <%- include('partials/navigation') %>
-    
-    <div class="container py-16">
-        <h2 class="text-3xl font-bold mb-8" style="color: black;">DESCRIPCIÓN DEL CURSO DE DESARROLLO DE APLICACIONES MÓVILES</h2>
 
-        <div class="card">
-            <h3 class="text-2xl font-bold text-white">ENCARGADO DEL CURSO:</h3>
-            <div class="flex items-center mb-4">
-                <img src="/img/Lucas.jpeg" alt="Leonardo Palomino" class="w-24 h-24 rounded-full mr-4"> <!-- Aumentar tamaño -->
-                <p class="text-lg text-white">
-                    <strong>LUCAS ESPINOZA</strong><br>
-                    Programador Full Stack de La Casa Informática
-                </p>
-            </div>
+    <div class="contenido">
+        <div class="contenido-text" style="text-align: center; color: #28293d; padding: 20px; border-radius: 8px;">
+            <h1 style="font-size: 36px; font-weight: bold;">CURSO DE DESARROLLO MÓVIL</h1>
+            <h2 style="font-size: 20px; font-weight: bold; color: black;">REACT NATIVE CON EXPO</h2>
+            <p style="font-size: 18px; line-height: 1.6;">
+                <strong>Curso completo de DESARROLLO MÓVIL </strong> Aprende a desarrollar aplicaciones móviles con React Native y Expo. Cubre componentes, estado, consumo de APIs, manejo de eventos, estado global con Zustand y mapas interactivos. Termina el curso con un proyecto final práctico. ¡Ideal para crear apps móviles desde cero!       </p>
+           
+            <a href="https://wa.me/51976783049?text=%C2%A1Hola%2C%20me%20interesa%20el%20curso%20de%20Desarrollo%20Movil"  class="cta-button" style="background-color: #28293d; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 18px;">Adquirir Ahora</a><br>
+            <a href="/promociones" class="cta-button" style="background-color: #28293d; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 18px;">Promociones que te interesarán</a>
         </div>
 
-        <div class="card">
-            <h3 class="text-2xl font-bold text-white">BALOTARIO DEL CURSO DE DESARROLLO DE APLICACIONES MÓVILES</h3>
-            <br>
-            <p class="text-lg text-white">
-                <strong>HORAS DE CLASE:</strong> 24 HORAS<br>
-            </p>
-            <br>
-            <ul class="list-disc ml-5">
-                <li><strong>Clase 1:</strong> Introducción a React Native y Expo
-                    <ul class="list-disc ml-5">
-                        <li>Introducción a React Native y sus diferencias con React.</li>
-                        <li>¿Qué es Expo y cómo facilita el desarrollo móvil?</li>
-                        <li>Configuración del entorno de desarrollo con Expo CLI.</li>
-                        <li>Creación de la primera aplicación móvil con React Native y Expo.</li>
-                    </ul>
-                </li>
-                <li><strong>Clase 2:</strong> Componentes y Props en React Native
-                    <ul class="list-disc ml-5">
-                        <li>Estructura de componentes en React Native.</li>
-                        <li>Uso y manejo de Props en componentes móviles.</li>
-                        <li>Componentes básicos de React Native (Text, View, Button, etc.).</li>
-                    </ul>
-                </li>
-                <li><strong>Clase 3:</strong> Estado y Hooks en React Native
-                    <ul class="list-disc ml-5">
-                        <li>Manejo del estado con <code>useState</code>.</li>
-                        <li>Introducción a <code>useEffect</code> para manejar efectos secundarios.</li>
-                        <li>Ciclo de vida de componentes en aplicaciones móviles.</li>
-                    </ul>
-                </li>
-                <li><strong>Clase 4:</strong> Manejo de Eventos y Estilos en React Native
-                    <ul class="list-disc ml-5">
-                        <li>Gestión de eventos en dispositivos móviles (touch, press, scroll).</li>
-                        <li>Uso de NativeWind CSS para la aplicación de estilos.</li>
-                        <li>Diferencias y ventajas de NativeWind CSS frente a StyleSheet.</li>
-                    </ul>
-                </li>
-                <li><strong>Clase 5:</strong> Consumo de APIs en React Native
-                    <ul class="list-disc ml-5">
-                        <li>Introducción al consumo de APIs en aplicaciones móviles.</li>
-                        <li>Uso de <code>fetch</code> para realizar peticiones HTTP.</li>
-                        <li>Manejo de respuestas y errores de APIs.</li>
-                    </ul>
-                </li>
-                <li><strong>Clase 6:</strong> Manejo del Estado Global con Zustand
-                    <ul class="list-disc ml-5">
-                        <li>Introducción a Zustand para el manejo del estado global.</li>
-                        <li>Implementación de estado global en una app móvil con Zustand.</li>
-                    </ul>
-                </li>
-                <li><strong>Clase 7:</strong> Librerías de Mapas en React Native
-                    <ul class="list-disc ml-5">
-                        <li>Integración de mapas en aplicaciones móviles con React Native Maps.</li>
-                        <li>Configuración de mapas interactivos.</li>
-                        <li>Uso de geolocalización y marcadores en el mapa.</li>
-                    </ul>
-                </li>
-                <li><strong>Clase 8:</strong> Proyecto Final y Feedback
-                    <ul class="list-disc ml-5">
-                        <li>Revisión del proyecto.</li>
-                        <li>Presentación del proyecto y feedback final.</li>
-                    </ul>
-                </li>
-            </ul>
-            <br>
-        </div>
-        
-        <div class="card">
-            <h3 class="text-2xl font-bold text-white">HORARIO DEL CURSO</h3><br>
-            <p class="text-lg text-white">
-                <strong>DURACIÓN:</strong> 2 MESES (NOVIEMBRE Y DICIEMBRE)<br>
-                <strong>INICIO:</strong> 9 DE NOVIEMBRE<br>
-                <strong>FINAL:</strong> 28 DE DICIEMBRE<br>
-                <strong>HORARIO:</strong> SÁBADO 9:00 AM – 12:00 PM (HORA PERUANA)<br>
-            </p><br>
-        </div>
-
-        <div class="card">
-            <h3 class="text-2xl font-bold text-white">¿Cuenta con certificado?</h3><br>
-            <p class="text-lg text-white">
-                Se otorgará un certificado luego de haber completado el curso de manera exitosa.
-            </p><br>
-        </div>
-
-        <div class="card">
-            <h3 class="text-2xl font-bold text-white">COSTO DEL CURSO</h3><br>
-            <p class="text-lg text-white">
-                <strong>COSTO:</strong> 120 SOLES
-            </p><br>
-        </div>
-
-        <div class="card">
-            <h3 class="text-2xl font-bold text-white">¿CÓMO SE REALIZAN LAS CLASES?</h3><br>
-            <p class="text-lg text-white">
-                Las clases se llevarán a cabo en un ambiente virtual a través de Zoom, donde la interacción y el aprendizaje colaborativo serán clave. Cada sesión será grabada, permitiéndote revisitar los conceptos cuando lo desees.
-            </p>
-            <p class="text-lg text-white">
-                Nos enfocaremos en la práctica mediante emocionantes proyectos y ejercicios que desafiarán tus habilidades. Con cada tarea, estarás construyendo un portafolio que refleje tu crecimiento como desarrollador. ¡Prepárate para un viaje de aprendizaje transformador!
-            </p><br>
-        </div>
-        <div class="text-center">
-            <a href="/promociones" class="button"> ¡No te pierdas nuestras promociones por la compra de más de 1 curso!</a> <!-- Enlace a la vista de promociones -->
-        </div>
-        
-        <!-- Botón de Inscribirse -->
-        <div class="text-center">
-            <a href="https://wa.me/51976783049?text=%C2%A1Hola%2C%20me%20interesa%20el%20curso%20de%20Desarrollo%20de%20Aplicaciones%20M%C3%B3viles%21" class="button" target="_blank">Inscribirse al curso</a> <!-- Enlace a WhatsApp con mensaje predeterminado que se abre en una nueva pestaña -->
-        </div>
+        <div class="course-info">
+            <img src="/img/14.jpg" alt="Imagen del curso">
+        </div><br><br>
     </div>
 
+    <div class="main-content">
+        <div class="course-container">
+            <h2>BALOTARIO DEL CURSO DE DESARROLLO MÓVIL</h2><br>
+
+            <div class="section">
+                <div class="section-title" onclick="toggleSection(this)">
+                    Sección 1:  Introducción a React Native y Expo
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <p>Introducción a React Native y sus diferencias con React.</p>
+                    <p>¿Qué es Expo y cómo facilita el desarrollo móvil?</p>
+                    <p>Configuración del entorno de desarrollo con Expo CLI.</p>
+                    <p>Creación de la primera aplicación móvil con React Native y Expo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title" onclick="toggleSection(this)">
+                    Sección 2: Componentes y Props en React Native
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <p>Estructura de componentes en React Native.</p>
+                    <p>Uso y manejo de Props en componentes móviles.</p>
+                    <p>- Componentes básicos de React Native (Text, View, Button, etc.).
+                    </p>
+                </div>
+                
+            </div>
+            <div class="section">
+                <div class="section-title" onclick="toggleSection(this)">
+                    Sección 3: Estado y Hooks en React Native
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <p>Manejo del estado con useState.</p>
+                    <p>Introducción a useEffect para manejar efectos secundarios.</p>
+                    <p>Ciclo de vida de componentes en aplicaciones móviles.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="section">
+                <div class="section-title" onclick="toggleSection(this)">
+                    Sección 4: Manejo de Eventos y Estilos en React Native
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <p>Gestión de eventos en dispositivos móviles (touch, press, scroll).</p>
+                    <p>Uso de NativeWind CSS para la aplicación de estilos.</p>
+                    <p>Diferencias y ventajas de NativeWind CSS frente a StyleSheet.</p>
+                </div>
+                
+            </div>
+
+            <div class="section">
+                <div class="section-title" onclick="toggleSection(this)">
+                    Sección 5:  Consumo de APIs en React Native
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <p>Introducción al consumo de APIs en aplicaciones móviles.</p>
+                    <p>Uso de fetch para realizar peticiones HTTP.</p>
+                    <p>Manejo de respuestas y errores de APIs.</p>
+                    
+                    
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title" onclick="toggleSection(this)">
+                    Sección 6: Manejo del Estado Global con Zustand
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <p>Introducción a Zustand para el manejo del estado global.</p>
+                    <p>Implementación de estado global en una app móvil con Zustand.
+                    </p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title" onclick="toggleSection(this)">
+                    Sección 7:  Librerías de Mapas en React Native
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="section-content">
+                    <p>Integración de mapas en aplicaciones móviles con React Native Maps.</p>
+                    <p>Configuración de mapas interactivos.</p>
+                    <p>Uso de geolocalización y marcadores en el mapa.</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title" onclick="toggleSection(this)">
+                    Sección 8: Proyecto Final y Feedback
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="section-content">
+                   
+                    <p>Revisión del proyecto.</p>
+                    <p>Examen final</p>
+                    <p>Presentación del proyecto y feedback final.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="course-info">
+            <img src="/img/movil.jpg" alt="Imagen del curso" style="border-radius: 8px; margin-bottom: 20px;">
+            <h4 style="font-size: 22px; font-weight: bold; margin-bottom: 15px; color: white;">Acerca de este curso</h4>
+        
+            <p style="text-align: left; color: white; font-size: 16px;">
+                <i class="fas fa-chalkboard-teacher" style="color: #ff6b6b; margin-right: 10px;"></i>
+                <strong>NOMBRE DEL PROFESOR:</strong> Lucas Espinoza
+            </p>
+        
+            <p style="text-align: left; color: white; font-size: 16px;">
+                <i class="fas fa-clipboard-list" style="color: #ff6b6b; margin-right: 10px;"></i>
+                <strong>NÚMERO DE CLASES:</strong> 8 clases
+            </p>
+        
+            <p style="text-align: left; color: white; font-size: 16px;">
+                <i class="fas fa-clock" style="color: #ff6b6b; margin-right: 10px;"></i>
+                <strong>HORAS DEL CURSO:</strong> 24 horas de contenido en video
+            </p>
+        
+            <p style="text-align: left; color: white; font-size: 16px;">
+                <i class="fas fa-dollar-sign" style="color: #ff6b6b; margin-right: 10px;"></i>
+                <strong>PRECIO:</strong> 120 soles
+            </p>
+        
+            <p style="text-align: left; color: white; font-size: 16px;">
+                <i class="fas fa-calendar-alt" style="color: #ff6b6b; margin-right: 10px;"></i>
+                <strong>HORARIO:</strong> SÁBADO: 9:00 am - 12:00 pm (Hora Peruana)
+            </p>
+            <p style="text-align: left; color: white; font-size: 16px;">
+                <i class="fas fa-calendar-alt" style="color: #ff6b6b; margin-right: 10px;"></i>
+                <strong>FECHA DE INICIO:</strong> 9 DE NOVIEMBRE
+            </p>
+            <p style="text-align: left; color: white; font-size: 16px;">
+                <i class="fas fa-calendar-alt" style="color: #ff6b6b; margin-right: 10px;"></i>
+                <strong>FECHA DE FINAL:</strong> 28 DE DICIEMBRE
+            </p>
+        
+            <p style="text-align: left; color: white; font-size: 16px;">
+                <i class="fas fa-globe" style="color: #ff6b6b; margin-right: 10px;"></i>
+                <strong>VÁLIDO PARA TODOS LOS PAÍSES</strong>
+            </p>
+        
+            <p style="text-align: left; color: white; font-size: 16px;">
+                <i class="fas fa-certificate" style="color: #ff6b6b; margin-right: 10px;"></i>
+                <strong>CERTIFICADO:</strong> Se otorgará un certificado al finalizar
+            </p>
+        </div><br><br>
+        
+    </div><br><br>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2" class="table-header">¿Qué incluye el curso?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Prácticas</td>
+                    <td><input type="checkbox" checked disabled></td>
+                </tr>
+                <tr>
+                    <td>Exámenes</td>
+                    <td><input type="checkbox" checked disabled></td>
+                </tr>
+                <tr>
+                    <td>Proyectos</td>
+                    <td><input type="checkbox" checked disabled></td>
+                </tr>
+                <tr>
+                    <td>Clases en vivo</td>
+                    <td><input type="checkbox" checked disabled></td>
+                </tr>
+                <tr>
+                    <td>Las Clases quedan grabadas</td>
+                    <td><input type="checkbox" checked disabled></td>
+                </tr>
+                <tr>
+                    <td>Constante seguimiento de tu avance</td>
+                    <td><input type="checkbox" checked disabled></td>
+                </tr>
+            </tbody>
+        </table>
+    </div><br><br>
     <%- include('partials/footer') %>
+
     
+    <script>
+        function toggleSection(section) {
+            const content = section.nextElementSibling;
+            const icon = section.querySelector('.expand-icon');
+            content.classList.toggle('show');
+            icon.classList.toggle('rotate');
+        }
+    </script>
 </body>
 </html>

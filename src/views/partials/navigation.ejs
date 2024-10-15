@@ -8,49 +8,64 @@
     <script src="https://unpkg.com/@heroicons/react@1.0.6/outline/heroicons.js"></script>
     <style>
         .navbar {
-            background-color: #374369; /* Color del navbar */
+            background-color: #374369;
         }
+        header {
+            text-align: center;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 10;
+        }
+        
+        main {
+            flex: 1;
+        }
+        
     </style>
 </head>
 <body class="bg-gradient-to-r from-blue-500 to-white">
-    <nav class="navbar relative mx-auto p-6">
-        <div class="flex items-center justify-between">
-            <div class="flex items-center">
-                <div class="mr-10">
-                    <a href="/">
-                        <img src="img/logoCasa.png" alt="Logo" width="80" height="80" class="h-20 w-20">
-                    </a>
+    
+    <header>
+        <nav class="navbar relative mx-auto p-6 w-full">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="mr-10">
+                        <a href="/">
+                            <img src="img/logoCasa.png" alt="Logo" width="80" height="80" class="h-20 w-20">
+                        </a>
+                    </div>
+                    <div class="hidden space-x-12 md:flex">
+                        <a href="/" class="text-white hover:text-yellow-400 transition">Inicio</a>
+                        <a href="/catalogoCursos" class="text-white hover:text-yellow-400 transition">Catálogo de Cursos</a>
+                        <a href="/Productos" class="text-white hover:text-yellow-400 transition">Catálogo de Productos</a>
+                        <a href="/Servicios" class="text-white hover:text-yellow-400 transition">Servicios</a>
+                        <a href="/promociones" class="text-white hover:text-yellow-400 transition">Promociones</a>
+                    </div>
                 </div>
-                <div class="hidden space-x-12 md:flex">
-                    <a href="/" class="text-white hover:text-yellow-400 transition">Inicio</a>
-                    <a href="/about" class="text-white hover:text-yellow-400 transition">Sobre Nosotros</a>
-                    <a href="/catalogoCursos" class="text-white hover:text-yellow-400 transition">Catálogo de Cursos</a>
-                    <a href="/Productos" class="text-white hover:text-yellow-400 transition">Catálogo de Productos</a>
-                    <a href="/Servicios" class="text-white hover:text-yellow-400 transition">Servicios</a>
-                    <a href="/promociones" class="text-white hover:text-yellow-400 transition">Promociones</a>
-                </div>
-
                 
+                <button class="md:hidden flex items-center" id="navbarToggle">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
             </div>
-            
-            <button class="md:hidden flex items-center" id="navbarToggle">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <div id="mobileMenu" class="md:hidden hidden">
-        <div class="flex flex-col py-5 bg-white w-full">
-            <a href="/" class="p-3 text-gray-700 hover:bg-blue-300 transition">Inicio</a>
-            <a href="/about" class="p-3 text-gray-700 hover:bg-blue-300 transition">Sobre Nosotros</a>
-            <a href="/catalogoCursos" class="p-3 text-gray-700 hover:bg-blue-300 transition">Catálogo de Cursos</a>
-            <a href="/Productos" class="p-3 text-gray-700 hover:bg-blue-300 transition">Catálogo de Productos</a>
-            <a href="/Servicios" class="p-3 text-gray-700 hover:bg-blue-300 transition">Servicios</a>
-            <a href="/promociones" class="p-3 text-gray-700 hover:bg-blue-300 transition">Promociones</a>
+    <main>
+        <div id="mobileMenu" class="md:hidden hidden">
+            <div class="flex flex-col py-5 bg-white w-full">
+                <a href="/" class="p-3 text-gray-700 hover:bg-blue-300 transition">Inicio</a>
+                <a href="/catalogoCursos" class="p-3 text-gray-700 hover:bg-blue-300 transition">Catálogo de Cursos</a>
+                <a href="/Productos" class="p-3 text-gray-700 hover:bg-blue-300 transition">Catálogo de Productos</a>
+                <a href="/Servicios" class="p-3 text-gray-700 hover:bg-blue-300 transition">Servicios</a>
+                <a href="/promociones" class="p-3 text-gray-700 hover:bg-blue-300 transition">Promociones</a>
+            </div>
         </div>
-    </div>
+    </main>
+
+   
 
     <script>
         const toggleButton = document.getElementById('navbarToggle');

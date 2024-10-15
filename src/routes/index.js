@@ -4,7 +4,7 @@ const router= Router()
 
 router.get('/',(req,res)=> res.render('index',{title: 'La Casa Informática' } ))
 
-router.get('/about',(req,res)=> res.render('about',{title: 'Sobre Nosotros' }))
+
 
 router.get('/catalogoCursos',(req,res)=> res.render('catalogoCursos',{title: 'Catálogo' }))
 router.get('/promociones',(req,res)=> res.render('promociones',{title: 'Promociones' }))
